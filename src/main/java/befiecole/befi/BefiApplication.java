@@ -27,7 +27,7 @@ public class BefiApplication implements CommandLineRunner {
                 etudiant.class,
                 evenement.class,
                 login.class);
-        // replogin.save(new login(null,"befi","befi"));
+         replogin.save(new login(null,"befi","befi"));
 
     }
 }
