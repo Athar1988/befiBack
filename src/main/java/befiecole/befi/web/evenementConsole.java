@@ -23,11 +23,6 @@ public class evenementConsole {
     @PostMapping("/upload")
     public BodyBuilder uplaodImage(@RequestParam("imageFile") MultipartFile file) throws IOException {
         evenement E=new evenement(null,file.getOriginalFilename(), file.getContentType(), file.getBytes());
-       /* System.out.println("Original Image Byte Size - " + file.getBytes().length);
-        E.setNameImage(file.getOriginalFilename());
-        E.setTypeImage(file.getContentType());
-        E.setPicByte(file.getBytes());
-        */
         evenementrep.save(E);
         return ResponseEntity.status(HttpStatus.OK);
     }
